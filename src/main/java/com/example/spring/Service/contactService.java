@@ -24,7 +24,8 @@ public class contactService {
 
     @Transactional
     public List<Contact> getContacts(){
-        return contactRepository.getAll().stream().sorted(Comparator.comparing(i -> (int) i.getId())).collect(Collectors.toList());
+        return contactRepository.getAll().stream().sorted(Comparator.comparing(i ->
+                (int) i.getId())).collect(Collectors.toList());
     }
 
     @Transactional
